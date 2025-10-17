@@ -35,12 +35,12 @@ testProductoParesRec = "Solo pares" ~: productoParesRec [2, 4, 6] ~?= 48
 testParsearCondicional :: Test
 testParsearCondicional = "Solo números válidos" ~: parsearCondicional ["42"] ~?= [Right 42]
 
--- -------------------------------------------------------------------------------
--- -- 4. Pruebas para sumaAcumuladaCondicional
--- -------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- 4. Pruebas para sumaAcumuladaCondicional
+-------------------------------------------------------------------------------
 
--- testSumaCondicional :: Test
--- testSumaCondicional = "Umbral 5.0, todos mayores" ~: sumaAcumuladaCondicional 5.0 [6.0, 7.0, 8.0] ~?= 21.0
+testSumaCondicional :: Test
+testSumaCondicional = "Umbral 5.0, todos mayores" ~: sumaAcumuladaCondicional 5.0 [6.0, 7.0, 8.0] ~?= 21.0
 
 -- -------------------------------------------------------------------------------
 -- -- 5. Pruebas para coordenadasImpares
@@ -66,7 +66,7 @@ allTests = TestList
     [ TestLabel "Problema 1: esPalindromo" testPalindromo
     , TestLabel "Problema 2: productoParesRec" testProductoParesRec
     , TestLabel "Problema 3: parsearCondicional" testParsearCondicional
-    -- , TestLabel "Problema 4: sumaAcumuladaCondicional" testSumaCondicional
+    , TestLabel "Problema 4: sumaAcumuladaCondicional" testSumaCondicional
     -- , TestLabel "Problema 5: coordenadasImpares" testCoordenadasImpares
     -- , TestLabel "Problema 6: descomponerListaSegura" testDescomponerListaSegura
     ]

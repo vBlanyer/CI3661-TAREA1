@@ -61,7 +61,7 @@ parsearCondicional (x:s)
 -- que son mayores que el umbral, y luego calcular la suma de los números
 -- filtrados utilizando una operación de plegado (fold).
 sumaAcumuladaCondicional :: Float -> [Float] -> Float
-sumaAcumuladaCondicional umbral xs = undefined
+sumaAcumuladaCondicional umbral xs = foldr (+) 0 (filter (>umbral) xs)
 
 -- -------------------------------------------------------------------------------
 -- -- Problema 5: Generación de Coordenadas Impares
