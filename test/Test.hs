@@ -42,12 +42,12 @@ testParsearCondicional = "Solo números válidos" ~: parsearCondicional ["42"] ~
 testSumaCondicional :: Test
 testSumaCondicional = "Umbral 5.0, todos mayores" ~: sumaAcumuladaCondicional 5.0 [6.0, 7.0, 8.0] ~?= 21.0
 
--- -------------------------------------------------------------------------------
--- -- 5. Pruebas para coordenadasImpares
--- -------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- 5. Pruebas para coordenadasImpares
+-------------------------------------------------------------------------------
 
--- testCoordenadasImpares :: Test
--- testCoordenadasImpares = "N=2" ~: coordenadasImpares 2 ~?= [(1, 2), (2, 1)]
+testCoordenadasImpares :: Test
+testCoordenadasImpares = "N=2" ~: coordenadasImpares 2 ~?= [(1, 2), (2, 1)]
 
 -- -------------------------------------------------------------------------------
 -- -- 6. Pruebas para descomponerListaSegura
@@ -67,7 +67,7 @@ allTests = TestList
     , TestLabel "Problema 2: productoParesRec" testProductoParesRec
     , TestLabel "Problema 3: parsearCondicional" testParsearCondicional
     , TestLabel "Problema 4: sumaAcumuladaCondicional" testSumaCondicional
-    -- , TestLabel "Problema 5: coordenadasImpares" testCoordenadasImpares
+    , TestLabel "Problema 5: coordenadasImpares" testCoordenadasImpares
     -- , TestLabel "Problema 6: descomponerListaSegura" testDescomponerListaSegura
     ]
 

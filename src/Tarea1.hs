@@ -63,16 +63,16 @@ parsearCondicional (x:s)
 sumaAcumuladaCondicional :: Float -> [Float] -> Float
 sumaAcumuladaCondicional umbral xs = foldr (+) 0 (filter (>umbral) xs)
 
--- -------------------------------------------------------------------------------
--- -- Problema 5: Generación de Coordenadas Impares
--- -------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Problema 5: Generación de Coordenadas Impares
+-------------------------------------------------------------------------------
 
--- -- Implementa una función que tome un número entero positivo N y genere una lista
--- -- de pares de coordenadas (x, y) donde x e y están en el rango [1, N] y la
--- -- suma de x e y (x+y) es un número impar. Utiliza Listas por Comprensión para
--- -- la implementación.
--- coordenadasImpares :: Int -> [(Int, Int)]
--- coordenadasImpares n = undefined
+-- Implementa una función que tome un número entero positivo N y genere una lista
+-- de pares de coordenadas (x, y) donde x e y están en el rango [1, N] y la
+-- suma de x e y (x+y) es un número impar. Utiliza Listas por Comprensión para
+-- la implementación.
+coordenadasImpares :: Int -> [(Int, Int)]
+coordenadasImpares n = [(x,y) | x <-[1..n], y <-[1..n], odd (x+y)]
 
 -- -------------------------------------------------------------------------------
 -- -- Problema 6: Descomposición Segura de Lista
