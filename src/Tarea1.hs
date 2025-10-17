@@ -1,10 +1,13 @@
 -------------------------------------------------------------------------------
 -- Tarea 1 - Laboratorio de Lenguajes de Programación I (CI-3661)
--- Nombre del estudiante: [INSERTE SU NOMBRE AQUÍ]
--- Carnet: [INSERTE SU CARNET AQUÍ]
+-- Nombre del estudiante: Blanyer Vielma
+-- Carnet: 16-11238
 -------------------------------------------------------------------------------
 
 module Tarea1 where
+
+import Text.Read (readMaybe)
+import Data.Char (toUpper) 
 
 -------------------------------------------------------------------------------
 -- Problema 1: Palíndromo
@@ -44,18 +47,21 @@ productoParesRec (x:s)
 -- numérica), devuelve Left String con la cadena original transformada a mayúsculas.
 -- Nota: Necesitarás funciones auxiliares para el parseo seguro y la conversión a mayúsculas.
 parsearCondicional :: [String] -> [Either String Int]
-parsearCondicional ss = undefined
+parsearCondicional [] = []
+parsearCondicional (x:s)
+      | Just n <- readMaybe x = Right n : parsearCondicional(s)
+      | otherwise = Left (map toUpper x) : parsearCondicional(s)
 
--- -------------------------------------------------------------------------------
--- -- Problema 4: Suma Acumulada Condicional
--- -------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Problema 4: Suma Acumulada Condicional
+-------------------------------------------------------------------------------
 
--- -- Implementa una función que reciba una lista de números de punto flotante y un
--- -- umbral (Float). La función debe filtrar la lista, manteniendo solo los números
--- -- que son mayores que el umbral, y luego calcular la suma de los números
--- -- filtrados utilizando una operación de plegado (fold).
--- sumaAcumuladaCondicional :: Float -> [Float] -> Float
--- sumaAcumuladaCondicional umbral xs = undefined
+-- Implementa una función que reciba una lista de números de punto flotante y un
+-- umbral (Float). La función debe filtrar la lista, manteniendo solo los números
+-- que son mayores que el umbral, y luego calcular la suma de los números
+-- filtrados utilizando una operación de plegado (fold).
+sumaAcumuladaCondicional :: Float -> [Float] -> Float
+sumaAcumuladaCondicional umbral xs = undefined
 
 -- -------------------------------------------------------------------------------
 -- -- Problema 5: Generación de Coordenadas Impares

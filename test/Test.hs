@@ -25,15 +25,15 @@ testProductoParesRec :: Test
 testProductoParesRec = "Solo pares" ~: productoParesRec [2, 4, 6] ~?= 48
 
 -- -------------------------------------------------------------------------------
--- -- 3. Pruebas para parsearCondicional
--- -------------------------------------------------------------------------------
+-- 3. Pruebas para parsearCondicional
+-------------------------------------------------------------------------------
 
--- -- Nota: Para que estas pruebas funcionen correctamente, la implementación
--- -- del alumno debe usar funciones estándar de Haskell para toUpper y para
--- -- intentar parsear a Int (e.g., readMaybe).
+-- Nota: Para que estas pruebas funcionen correctamente, la implementación
+-- del alumno debe usar funciones estándar de Haskell para toUpper y para
+-- intentar parsear a Int (e.g., readMaybe).
 
--- testParsearCondicional :: Test
--- testParsearCondicional = "Solo números válidos" ~: parsearCondicional ["42"] ~?= [Right 42]
+testParsearCondicional :: Test
+testParsearCondicional = "Solo números válidos" ~: parsearCondicional ["42"] ~?= [Right 42]
 
 -- -------------------------------------------------------------------------------
 -- -- 4. Pruebas para sumaAcumuladaCondicional
@@ -65,7 +65,7 @@ allTests :: Test
 allTests = TestList
     [ TestLabel "Problema 1: esPalindromo" testPalindromo
     , TestLabel "Problema 2: productoParesRec" testProductoParesRec
-    -- , TestLabel "Problema 3: parsearCondicional" testParsearCondicional
+    , TestLabel "Problema 3: parsearCondicional" testParsearCondicional
     -- , TestLabel "Problema 4: sumaAcumuladaCondicional" testSumaCondicional
     -- , TestLabel "Problema 5: coordenadasImpares" testCoordenadasImpares
     -- , TestLabel "Problema 6: descomponerListaSegura" testDescomponerListaSegura
