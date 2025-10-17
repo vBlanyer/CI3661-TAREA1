@@ -1,0 +1,8 @@
+# Carpetas
+*/.stack-work/
+/.vscode/
+
+# Archivos
+*.exe
+*.lock
+*.cabal
