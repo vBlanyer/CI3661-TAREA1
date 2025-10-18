@@ -74,15 +74,16 @@ sumaAcumuladaCondicional umbral xs = foldr (+) 0 (filter (>umbral) xs)
 coordenadasImpares :: Int -> [(Int, Int)]
 coordenadasImpares n = [(x,y) | x <-[1..n], y <-[1..n], odd (x+y)]
 
--- -------------------------------------------------------------------------------
--- -- Problema 6: Descomposición Segura de Lista
--- -------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- Problema 6: Descomposición Segura de Lista
+-------------------------------------------------------------------------------
 
--- -- Implementa una función recursiva que divida una lista en su cabeza (head) y
--- -- el resto (tail), pero lo haga de manera segura utilizando el tipo Maybe.
--- -- Si la lista está vacía, devuelve Nothing. Si la lista no está vacía,
--- -- devuelve Just con una tupla que contiene el primer elemento y el resto de la lista.
--- descomponerListaSegura :: [a] -> Maybe (a, [a])
--- descomponerListaSegura xs = undefined
+-- Implementa una función recursiva que divida una lista en su cabeza (head) y
+-- el resto (tail), pero lo haga de manera segura utilizando el tipo Maybe.
+-- Si la lista está vacía, devuelve Nothing. Si la lista no está vacía,
+-- devuelve Just con una tupla que contiene el primer elemento y el resto de la lista.
+descomponerListaSegura :: [a] -> Maybe (a, [a])
+descomponerListaSegura [] = Nothing
+descomponerListaSegura (x:a) = Just (x, a)
 
--- -------------------------------------------------------------------------------
+----------------------------------------------------------------------------------

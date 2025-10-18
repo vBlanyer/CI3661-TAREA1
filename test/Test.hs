@@ -49,12 +49,12 @@ testSumaCondicional = "Umbral 5.0, todos mayores" ~: sumaAcumuladaCondicional 5.
 testCoordenadasImpares :: Test
 testCoordenadasImpares = "N=2" ~: coordenadasImpares 2 ~?= [(1, 2), (2, 1)]
 
--- -------------------------------------------------------------------------------
--- -- 6. Pruebas para descomponerListaSegura
--- -------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-- 6. Pruebas para descomponerListaSegura
+-------------------------------------------------------------------------------
 
--- testDescomponerListaSegura :: Test
--- testDescomponerListaSegura = "Un elemento" ~: descomponerListaSegura [1] ~?= Just (1, [])
+testDescomponerListaSegura :: Test
+testDescomponerListaSegura = "Un elemento" ~: descomponerListaSegura [1] ~?= Just (1, [])
 
 -------------------------------------------------------------------------------
 -- Ejecución Principal
@@ -68,7 +68,7 @@ allTests = TestList
     , TestLabel "Problema 3: parsearCondicional" testParsearCondicional
     , TestLabel "Problema 4: sumaAcumuladaCondicional" testSumaCondicional
     , TestLabel "Problema 5: coordenadasImpares" testCoordenadasImpares
-    -- , TestLabel "Problema 6: descomponerListaSegura" testDescomponerListaSegura
+    , TestLabel "Problema 6: descomponerListaSegura" testDescomponerListaSegura
     ]
 
 main :: IO Counts
